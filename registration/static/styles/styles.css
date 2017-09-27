@@ -1,0 +1,115 @@
+
+    html, select, input {
+        font-family: calibri, verdana, helvetica, arial, sans-serif;
+    }
+    fieldset {
+        padding: 10px 40px 20px 40px;
+    }
+    input[type='button']:hover {
+        background-color: #333;
+    }
+    input[type='button']:active {
+        /* background-color: #0064ff; */
+        background-color: #00afd5;
+    }
+    select {
+        height: 75px;
+        width: 350px;
+        font-size: 2.5em;
+    }
+    option {
+        height: 75px;
+    }
+    a {
+        font-size: 1.5em;
+        color: #C30000;
+        text-decoration: none;
+        backgound-color: #000;
+    }
+    a:hover {
+        color: #aaa;
+    }
+    .container-outer{
+        height: 100%;
+        margin: auto;
+        /* border: 1px solid red; */
+    }
+    .container-header {
+        height: 50px;
+        padding: 25px;
+    }
+    .container-content {
+        padding: 0px 50px;
+        /* border: 1px solid orange; */
+    }
+    .container-gallery {
+        height: 300px; 
+        width:100%; 
+        overflow: auto;
+    }
+    .alias-verification {
+        display: inline;
+        /* float: left; */
+    }
+    .alias-font {
+        font-size: 2em;
+        color: #00afd5;
+    }
+    div.gallery {
+        margin: 5px;
+        border: 1px solid #ccc;
+        float: left;
+        width: 160px;
+        text-align: center;
+    }
+    div.gallery img {
+        width: 100%;
+        height: auto;
+    }
+    div.gallery:hover {
+        border: 1px solid #0061ff;
+        opacity: 0.6;
+    }
+    div.gallery img:visited {
+        box-shadow: 10px;
+    }            
+    div.desc {
+        font-size: 1em;
+        padding: 15px;
+        text-align: center;
+    }
+    .light {
+        color: #aaa;
+        border: none;
+    }            
+    .invis {
+        color: #fff;
+        border: none;
+    } 
+    .alias-dropdown {
+        display: inline-block;
+    }
+    .alias-label {
+        color: #777;
+        font-size: 1.5em;
+        display: block;
+    }
+    .guardian-input {
+        display: inline-block;
+    }
+    .font-15{
+        font-size: 1.5em;
+    }
+    .btn-flat {
+        font-family: consolas;
+        font-size: 1.5em;
+        font-weight: none;
+        color: #fff;
+        background-color: #00afd5;
+        border: none;
+        height: 60px;
+        width: 175px;
+    }
+    .btn-flat:hover {
+        background-color: #768d99;
+    }    

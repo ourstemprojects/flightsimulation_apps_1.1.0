@@ -1,0 +1,207 @@
+<!doctype html>
+<html>
+    <head>
+        <title>USER REGISTRATION</title>
+        <!-- STYLES -->
+        <link rel='stylesheet' type='text/css' href='/static/styles/styles.css'>
+        <!-- <link rel='stylesheet' type='text/css' href='../static/styles/styles.css'> -->
+        <!-- JAVASCRIPT FUNCTIONS -->
+        <script src='/static/js/functions.js'></script>
+    </head>
+
+    <body>
+        <div class='container-outer'>
+
+            <!-- CONTENT -->
+            <div class='container-content'>
+                <!-- HEADER -->
+                <h1 style='padding: 30px 0px 10px 0px;'>USER REGISTRATION</h1>
+
+                <form action="{{ url_for('add_record') }}" method='post'>
+                    <fieldset>
+
+                        <!-- ALIAS -->
+                        <h2>1: BUILD AN ALIAS</h2>
+                        <div>
+                            <div class='alias-dropdown'>
+                                <label class='alias-label'>select a colour</label>
+                                <select id="colour" name="colour">
+                                    <option value="black">Black</option>
+                                    <option value="blue">Blue</option>
+                                    <option value="gold">Gold</option>
+                                    <option value="green">Green</option>
+                                    <option value="orange">Orange</option>
+                                    <option value="pink">Pink</option>
+                                    <option value="purple">Purple</option>
+                                    <option value="red">Red</option>
+                                    <option value="silver">Silver</option>
+                                    <option value="white">White</option>
+                                    <option value="yellow">Yellow</option>
+                                </select> <br><br>
+                            </div>
+
+                            <div class='alias-dropdown'>
+                                <label class='alias-label'>select an animal</label>
+                                <select id="animal" name="animal">
+                                    <option value="bird">Bird</option>
+                                    <option value="cat">Cat</option>
+                                    <option value="cheetah">Cheetah</option>
+                                    <option value="dinosaur">Dinosaur</option>
+                                    <option value="dog">Dog</option>
+                                    <option value="eagle">Eagle</option>
+                                    <option value="elephant">Elephant</option>
+                                    <option value="fox">Fox</option>
+                                    <option value="horse">Horse</option>
+                                    <option value="leopard">Leopard</option>
+                                    <option value="lion">Lion</option>
+                                    <option value="monkey">Monkey</option>
+                                    <option value="panda">Panda</option>
+                                    <option value="rabbit">Rabbit</option>
+                                    <option value="seahorse">Seahorse</option>
+                                    <option value="shark">Shark</option>
+                                    <option value="snake">Snake</option>
+                                    <option value="tiger">Tiger</option>
+                                    <option value="turtle">Turtle</option>
+                                    <option value="zebra">Zebra</option>
+                                </select> <br><br>
+                            </div>
+
+                            <div class='alias-dropdown'>
+                                <label class='alias-label'>select a number</label>
+                                <select id="number" name="number">
+                                    <option value="01">01</option>
+                                    <option value="02">02</option>
+                                    <option value="03">03</option>
+                                    <option value="04">04</option>
+                                    <option value="05">05</option>
+                                    <option value="06">06</option>
+                                    <option value="07">07</option>
+                                    <option value="08">08</option>
+                                    <option value="09">09</option>
+                                    <option value="10">10</option>
+                                    <option value="13">13</option>
+                                    <option value="73">73</option>
+                                </select><br><br>
+                            </div>
+                        </div>
+                        <!-- GET EMAIL ADDRESS -->
+                        <div class='guardian-input'>
+                            <label class='alias-label'>guardian's email address</label>
+                            <input class='font-15' size='40' type='email' minlength='1' name='email' autocomplete='off'>
+                        </div>
+                        <!-- GET PHONE NUMBER -->
+                        <div class='guardian-input'>
+                            <label class='alias-label'>guardian's phone number</label>
+                            <input class='font-15' size='40' type='text' minlength='11' name='phone' autocomplete='off'>
+                        </div>
+                        <div>
+                            <label style='color: #999; line-height: 2.5em;'>(so we can contact you if you win)</label><br>
+                        </div>
+                        <br><br>
+
+                        <div>
+                            <!-- AVATAR SELECTION -->
+                            <h2>2: SELECT AN AVATAR</h2>
+                            <div class='container-gallery'>
+                                <div class='gallery' id='img1'>
+                                    <img src='/static/images/alien.png' onclick="getFileName('img1', this.src)">
+                                    <div class='desc'>Mr. Alien</div>
+                                </div>
+                                <div class='gallery' id='img2'>
+                                    <img src='/static/images/angus.png' onclick="getFileName('img2', this.src)">
+                                    <div class='desc'>Sir. Angus</div>
+                                </div>
+                                <div class='gallery' id='img3'>
+                                    <img src='/static/images/bart.png' onclick="getFileName('img3', this.src)">
+                                    <div class='desc'>B. Tuxson</div>
+                                </div>
+                                <div class='gallery' id='img4'>
+                                    <img src='/static/images/bluesy.png' onclick="getFileName('img4', this.src)">
+                                    <div class='desc'>Bluesy Tux</div>
+                                </div>
+                                <div class='gallery'id='img5'>
+                                    <img src='/static/images/captain.png' onclick="getFileName('img5', this.src)">
+                                    <div class='desc'>Admiral Tux</div>
+                                </div>
+                                <div class='gallery' id='img6'>
+                                    <img src='/static/images/crash.png' onclick="getFileName('img6', this.src)">
+                                    <div class='desc'>Crash McGee</div>
+                                </div>
+                                <div class='gallery' id='img7'>
+                                    <img src='/static/images/cyborg.png' onclick="getFileName('img7', this.src)">
+                                    <div class='desc'>Cyborg</div>
+                                </div>
+                                <div class='gallery' id='img8'>
+                                    <img src='/static/images/daze.png' onclick="getFileName('img8', this.src)">
+                                    <div class='desc'>Daizey</div>
+                                </div>
+                                <div class='gallery' id='img9'>
+                                    <img src='/static/images/frankentux.png' onclick="getFileName('img9', this.src)">
+                                    <div class='desc'>Franken-tux</div>
+                                </div>
+                                <div class='gallery' id='img10'>
+                                    <img src='/static/images/goldy.png' onclick="getFileName('img10', this.src)">
+                                    <div class='desc'>Goldy Tux</div>
+                                </div>
+                                <div class='gallery' id='img11'>
+                                    <img src='/static/images/green.png' onclick="getFileName('img11', this.src)">
+                                    <div class='desc'>Green Tux</div>
+                                </div>
+                                <div class='gallery' id='img12'>
+                                    <img src='/static/images/mcfly.png' onclick="getFileName('img12', this.src)">
+                                    <div class='desc'>McFly</div>
+                                </div>
+                                <div class='gallery' id='img13'>
+                                    <img src='/static/images/newton.png' onclick="getFileName('img13', this.src)">
+                                    <div class='desc'>Sir. Newton</div>
+                                </div>
+                                <div class='gallery' id='img14'>
+                                    <img src='/static/images/ninja.png' onclick="getFileName('img14', this.src)">
+                                    <div class='desc'>Ninja Tux</div>
+                                </div>
+                                <div class='gallery' id='img15'>
+                                    <img src='/static/images/nordy.png' onclick="getFileName('img15', this.src)">
+                                    <div class='desc'>Nordy</div>
+                                </div>
+                                <div class='gallery' id='img16'>
+                                    <img src='/static/images/pink.png' onclick="getFileName('img16', this.src)">
+                                    <div class='desc'>Floyd</div>
+                                </div>
+                                <div class='gallery' id='img17'>
+                                    <img src='/static/images/queeny.png' onclick="getFileName('img17', this.src)">
+                                    <div class='desc'>HRH Tux</div>
+                                </div>
+                                <div class='gallery' id='img18'>
+                                    <img src='/static/images/red.png' onclick="getFileName('img18', this.src)">
+                                    <div class='desc'>Red Tux</div>
+                                </div>
+                                <div class='gallery' id='img19'>
+                                    <img src='/static/images/sparrow.png' onclick="getFileName('img19', this.src)">
+                                    <div class='desc'>Cap'n Tux</div>
+                                </div>
+                                <div class='gallery' id='img20'>
+                                    <img src='/static/images/tux.png' onclick="getFileName('img20', this.src)">
+                                    <div class='desc'>Top Tux</div>
+                                </div>
+                                <div class='gallery' id='img21'>
+                                    <img src='/static/images/tuxxy.png' onclick="getFileName('img21', this.src)">
+                                    <div class='desc'>South P' Tux</div>
+                                </div>
+                            </div>
+
+                            <!-- CAPTURE IMAGE FILENAME (INVISIBLE) -->
+                            <input class='invis' name='image_name' id='image_name' type='text' size=64 readonly>
+                        </div>
+
+                        <div>
+                            <!-- REGISTER! -->
+                            <h2>3: REGISTER</h2>
+                            <input class='btn-flat' id="submit" name="submit" type="submit" value="Register!">
+                        </div>
+
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

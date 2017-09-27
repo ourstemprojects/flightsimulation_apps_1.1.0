@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+    
+    <head>
+        <title>Registration Feedback</title>
+        <!-- STYLES -->
+        <link rel='stylesheet' type='text/css' href='/static/styles/styles.css'>
+    </head>
+
+    <body>
+        <form action="" method='post'>
+            <div class='container-outer'>
+                <div class='container-content'>
+                
+                    <!-- DISPLAY DATABASE RESPONSE-->
+                    <div>
+                        <h1>REGISTRATION RESULT</h1>
+                        <hr><br>
+                        <label id='response'>{{ msg }}</label>
+                        <br><br><br>
+                    </div>
+                    
+                    <!-- USER ALIAS VERIFICATION -->
+                    <div class='alias-verification'>
+                        <label style='font-size: 1.5em'><b>Your alias is:</b>&nbsp;&nbsp;&nbsp;<label>
+                        <label class='alias-font' id='alias'>{{ alias }}</label><br>
+                        <br><br><br><br>
+                    </div>
+                    
+                    <!-- GO BACK HOME -->
+                    <div style='text-align: center;'>
+                        <a href='http://127.0.0.1:5000'>go back home</a>
+                    </div>
+
+                    <!-- SCRIPT: TEST DATABASE RESPONSE -->
+                    <script>
+                        var response = '{{ response }}';
+                        var alias = "{{ alias }}";
+                       
+                        <!-- NOTIFY USER THE ALIAS IS TAKEN -->
+                        if (response == 'FAIL') {
+                            document.getElementById('alias').innerHTML = 'UNKNOWN';
+                            document.getElementById('response').style.color = '#ff0000';
+                            window.alert('{{ msg }}');
+                            window.location.href = 'http://127.0.0.1:5000';
+                        }
+                    </script>
+                    
+                </div>
+            </div>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,6 @@
+{
+      "database"            :   "digitalenginesimulator"
+    , "host"                :   "127.0.0.1"
+    , "user"                :   "uid"
+    , "password"            :   "pwd"
+}

@@ -1,0 +1,12 @@
+{
+      "site"                    :   "http://127.0.0.1:5000"
+    , "site_comment01"          :   "The 'site' key is used for string replacement when locating the avatar image file."
+    , "site_comment02"          :   "If the host or port keys are updated, the 'site' key must be updated to match."
+    , "qry_create_avatardata"   :   "db_resource/qry_create_avatardata.sql"
+    , "qry_insert_avatardata"   :   "db_resource/qry_insert_avatardata.sql"
+    , "qry_alias_exists"        :   "db_resource/qry_alias_exists.sql"
+    , "host"                    :   "127.0.0.1"
+    , "port"                    :   5000
+    , "app_debug"               :   "True"
+    , "app_threaded"            :   "True"
+}
