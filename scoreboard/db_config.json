@@ -1,6 +1,6 @@
 {
-      "database"            :   "digitalenginesimulator"
-    , "host"                :   "127.0.0.10"
-    , "user"                :   "uid"
-    , "password"            :   "pwd"
+      "database"            :   "flightsim"
+    , "host"                :   "127.0.0.1"
+    , "user"                :   "myuser"
+    , "password"            :   "mypassword"
 }
